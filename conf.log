@@ -1,0 +1,104 @@
+# this configuration file is suitable for displaying kernel log files
+
+# Data
+regexp=\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\]
+colours=cyan
+count=once
+======
+# remoção de texto do fim
+regexp=\[\] .*$
+replace=
+======
+# Quebra de linha
+regexp=.*####
+replace=\n\n
+======
+# Metodo de teste
+regexp=.*test.*$
+colours=white bold reverse
+count=once
+======
+# Sucesso no teste
+regexp=☢
+colours=yellow bold
+count=once
+======
+# Sucesso no teste
+regexp=✔
+colours=green bold
+count=once
+======
+# Falha no teste
+regexp=✘
+colours=red bold
+count=once
+======
+# SUCCESS RESPONSE
+regexp=.*\{"code":20.*$
+colours=green bold reverse
+count=more
+======
+# ERROR RESPONSE
+regexp=.*\{"code":40.*$
+colours=cyan bold reverse
+count=more
+======
+# FATAL ERROR RESPONSE
+regexp=.*\{"code":500.*$
+colours=red bold reverse
+count=more
+======
+# SQL Success
+regexp=SqlSuccess.*$
+colours=white bold
+count=more
+======
+# SQL Rows
+regexp=Rows:\s\d+
+colours= yellow bold underline
+count=once
+======
+# SQL Error
+regexp=SqlError.*$
+colours=red bold
+count=more
+======
+# ERROR
+regexp=AppDev.ERROR:
+colours=red bold reverse
+count=once
+======
+# DEBUG
+regexp=AppDev.DEBUG:
+colours=yellow bold reverse
+count=once
+======
+# INFO
+#regexp=AppDev.INFO:
+#colours=blue bold reverse
+#count=once
+======
+# GET
+regexp=.*"GET".*$
+colours=green bold reverse
+count=once
+======
+# POST
+regexp=.*"POST".*$
+colours=blue bold reverse
+count=once
+======
+# PUT
+regexp=.*"PUT".*$
+colours=yellow bold reverse
+count=once
+======
+# PATCH
+regexp=.*"PATCH".*$
+colours=cyan bold reverse
+count=once
+======
+# DELETE
+regexp=.*"DELETE".*$
+colours=red bold reverse
+count=once

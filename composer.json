@@ -1,0 +1,46 @@
+{
+  "name": "incluirtecnologia/transparencia",
+  "description": "Consulta informações de sobre viagens a serviço",
+  "type": "project",
+  "require": {
+    "guzzlehttp/guzzle": "^7.0",
+    "incluirtecnologia/intec-slim-base": "^1.0",
+    "robmorgan/phinx": "^0.11"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.13",
+    "lctrs/psalm-psr-container-plugin": "^1.1",
+    "phpunit/phpunit": "^9.5",
+    "psalm/plugin-phpunit": "^0.15.1",
+    "vimeo/psalm": "^4.6"
+  },
+  "repositories": {
+    "incluirtecnologia/intec-slim-base": {
+      "type": "vcs",
+      "url": "https://gitlab.com/incluirtecnologia/intec-slim-base.git"
+    }
+  },
+  "authors": [
+    {
+      "name": "Márcio Dias",
+      "email": "marciojr91@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Intec\\TransparenciaViagensServico\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Intec\\TransparenciaViagensServico\\Test\\": "tests"
+    }
+  },
+  "config": {
+    "process-timeout": 0,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "stable"
+}
