@@ -1,6 +1,6 @@
 ## 1. Atividades
 
-Observação: candidatos à vaga de estágio deverão fazer pelo menos os itens 1 a 6. Candidatos para contratação deverão concluír todos os itens.
+Observação: candidatos à vaga de estágio deverão fazer pelo menos os itens 1 a 6. Candidatos para contratação deverão concluir todos os itens.
 
 1. Criar uma conta no portal de dados do governo e pegar seu token: http://www.transparencia.gov.br/api-de-dados
 2. Adicionar o token na aplicação, conforme exemplo abaixo:
