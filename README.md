@@ -1,78 +1,8 @@
+## 1. Atividades
 
-## Aplicação tem como bibliotecas de base:
+Observação: candidatos à vaga de estágio deverão fazer pelo menos os itens 1 a 6. Candidatos para contratação deverão concluír todos os itens.
 
-- Slim: https://www.slimframework.com/docs/v4/
-- Phinx: https://phinx.readthedocs.io/en/latest/intro.html
-
-## Comandos Úteis
-
-1. Iniciar o docker
-
-```sh
-docker-compose up
-```
-
-2. Iniciar entrar no contêiner do php
-
-```sh
-docker exec -it tvas-php bash
-```
-
-3. Instalar dependências
-
-```sh
-# dentro do contêiner do php
-composer install
-```
-
-4. Acessar o container do banco de dados
-
-```sh
-docker exec -it tvas-sql bash -c "mysql -u tvas -p'tvas' tvas"
-```
-
-5. Acessar log da aplicação
-
-```sh
-docker exec -it tvas-php bash -c "grc -c conf.log tail -f var/logs/app.log"
-```
-
-6. Executar um teste específico
-
-```sh
-# dentro do contêiner do php
-vendor/bin/phpunit --filter <ClasseDeTesteOuMetodoDeTeste>
-# exemplo
-vendor/bin/phpunit --filter testHealthCheckWillReturn200StatusCode
-```
-
-Mais informações em: https://phpunit.readthedocs.io/en/9.5/
-
-
-7. Executar análise estática
-
-```php
-vendor/bin/psalm --show-issues=true
-```
-
-8. Executar migrações no banco de dados
-
-```sh
-# dentro do contêiner do php
-vendor/bin/phinx migrate
-```
-
-Mais informações em: https://phinx.readthedocs.io/en/latest/intro.html
-
-## Documentação da API da Transparência
-
-- http://www.transparencia.gov.br/api-de-dados
-
-
-## Atividades
-
-
-1. Criar uma conta no portal de dados do governo e pegar seu token (ver link acima)
+1. Criar uma conta no portal de dados do governo e pegar seu token: http://www.transparencia.gov.br/api-de-dados
 2. Adicionar o token na aplicação, conforme exemplo abaixo:
 
 ```php
@@ -119,9 +49,75 @@ Observação: O código ibge escolhido ficará a critério do candidato (escolha
 - Um teste funcional para a rota criada.
 - Um teste unitário para o model e para o service criado.
 
-## Considerações finais
+## 2. Considerações
 
 - O estilo de código deverá seguir as PSR's 1 e 12.
 - A injeção de dependências deverá seguir a PSR 11.
+- Documentação sobre as psr's: https://www.php-fig.org/psr/
+- Documentação do Slim: https://www.slimframework.com/docs/v4/
+- Documentação do Phinx: https://phinx.readthedocs.io/en/latest/intro.html
 
-Documentação sobre as psr's: https://www.php-fig.org/psr/
+## 3. Comandos Úteis
+
+1. Iniciar o docker
+
+```sh
+docker-compose up
+```
+
+2. Entrar no contêiner do php
+
+```sh
+docker exec -it tvas-php bash
+```
+
+3. Instalar dependências
+
+```sh
+# dentro do contêiner do php
+composer install
+```
+
+4. Executar migrações no banco de dados
+
+```sh
+# dentro do contêiner do php
+vendor/bin/phinx migrate
+```
+
+5. Acessar o container do banco de dados
+
+```sh
+docker exec -it tvas-sql bash -c "mysql -u tvas -p'tvas' tvas"
+```
+
+6. Acessar log da aplicação
+
+Observação: antes de executar o comando abaixo crie um arquivo vazio em `var/logs/app.log`.
+
+```sh
+docker exec -it tvas-php bash -c "grc -c conf.log tail -f var/logs/app.log"
+```
+
+7. Executar um teste específico
+
+```sh
+# dentro do contêiner do php
+vendor/bin/phpunit --filter <ClasseDeTesteOuMetodoDeTeste>
+# exemplo
+vendor/bin/phpunit --filter testHealthCheckWillReturn200StatusCode
+```
+
+Mais informações em: https://phpunit.readthedocs.io/en/9.5/
+
+8. Executar análise estática
+
+```php
+vendor/bin/psalm --show-issues=true
+```
+
+Mais informações em: https://phinx.readthedocs.io/en/latest/intro.html
+
+## 4. Documentação da API da Transparência
+
+- http://www.transparencia.gov.br/api-de-dados
