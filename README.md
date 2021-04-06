@@ -49,6 +49,8 @@ Observação: O código IBGE escolhido ficará a critério do candidato (escolha
 - Um teste funcional para a rota criada.
 - Um teste unitário para o model e para o service criado.
 
+9. Documentar rotas utilizando alguma especificação de API. Exemplo: https://swagger.io/docs/specification/about/
+
 ## 2. Considerações
 
 - O estilo de código deverá seguir as PSR's 1 e 12.
@@ -56,7 +58,7 @@ Observação: O código IBGE escolhido ficará a critério do candidato (escolha
 - Documentação sobre as psr's: https://www.php-fig.org/psr/
 - Documentação do Slim: https://www.slimframework.com/docs/v4/
 - Documentação do Phinx: https://phinx.readthedocs.io/en/latest/intro.html
-- A entrega da prova deverá ser através de compartilhamento de um repositório privado (no gitlab) com o usuário @incluirtecnologia.
+- A entrega da prova deverá ser através de compartilhamento de um repositório privado (no gitlab) com o usuário @incluirtecnologia e link da documentação da API no Swagger (https://swagger.io/).
 
 ## 3. Comandos Úteis
 
