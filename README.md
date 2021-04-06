@@ -56,6 +56,7 @@ Observação: O código IBGE escolhido ficará a critério do candidato (escolha
 - Documentação sobre as psr's: https://www.php-fig.org/psr/
 - Documentação do Slim: https://www.slimframework.com/docs/v4/
 - Documentação do Phinx: https://phinx.readthedocs.io/en/latest/intro.html
+- A entrega da prova deverá ser através de compartilhamento de um repositório privado (no gitlab) com o usuário @incluirtecnologia.
 
 ## 3. Comandos Úteis
 
