@@ -34,11 +34,11 @@ vendor/bin/phpunit --filter testGetSiafiCodesIntegration
 
 6. Criar um rota na aplicação que dado um *codigoIbge* e um valor *mesAno*:
 
-- Consulta nos dois enpoints do item 4 se a consulta já não estiver salva nas tabelas.
-- Salva nas duas tabelas do item 5 se a consulta já não estiver salva nas tabelas.
+- Consulta nos dois enpoints do item 4 (somente se a consulta já não estiver salva nas tabelas) ou utiliza os valores já salvos no banco de dados.
+- Salva nas duas tabelas do item 5 (somente se a consulta já não estiver salva nas tabelas).
 - Retorna os valores combinados das duas consultas
 
-Observação: O código ibge escolhido ficará a critério do candidato (escolha um código que traga resultados).
+Observação: O código IBGE escolhido ficará a critério do candidato (escolha um código que traga resultados).
 
 7. Realizar consultas para os meses de 2020 (janeiro a dezembro) nos dois enpoints e criar uma *seed* usando o phinx.
 
@@ -93,7 +93,7 @@ docker exec -it tvas-sql bash -c "mysql -u tvas -p'tvas' tvas"
 
 6. Acessar log da aplicação
 
-Observação: antes de executar o comando abaixo crie um arquivo vazio em `var/logs/app.log`.
+Observação: antes de executar o comando abaixo, crie um arquivo vazio em `var/logs/app.log`.
 
 ```sh
 docker exec -it tvas-php bash -c "grc -c conf.log tail -f var/logs/app.log"
