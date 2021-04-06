@@ -113,7 +113,7 @@ Mais informações em: https://phpunit.readthedocs.io/en/9.5/
 8. Executar análise estática
 
 ```php
-vendor/bin/psalm --show-issues=true
+vendor/bin/psalm --show-info=true
 ```
 
 Mais informações em: https://phinx.readthedocs.io/en/latest/intro.html
